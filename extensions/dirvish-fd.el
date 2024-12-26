@@ -213,7 +213,7 @@ Raise an error if fd executable is not available."
                           (t "all")))
          types exts excludes)
     (dolist (arg args)
-      (cond ((string-prefix-p "--type=" arg) (push (substring arg 8) types))
+      (cond ((string-prefix-p "--type=" arg) (push (substring arg 7) types))
             ((string-prefix-p "--extension=" arg) (push (substring arg 12) exts))
             ((string-prefix-p "--exclude=" arg) (push (substring arg 10) excludes))))
     (setq types (mapconcat #'concat types ","))
